@@ -1,0 +1,15 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-angularjspython-prod-165048-authRole",
+            "UnauthRoleArn": "arn:aws:iam::210534412144:role/amplify-angularjspython-prod-165048-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::210534412144:role/amplify-angularjspython-prod-165048-authRole",
+            "Region": "ap-southeast-1",
+            "DeploymentBucketName": "amplify-angularjspython-prod-165048-deployment",
+            "UnauthRoleName": "amplify-angularjspython-prod-165048-unauthRole",
+            "StackName": "amplify-angularjspython-prod-165048",
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:210534412144:stack/amplify-angularjspython-prod-165048/02c96d90-8a0b-11ea-8c7b-06abab1199f8",
+            "AmplifyAppId": "d2223igbo685gx"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "projectName": "angularjspython",
+    "version": "3.0",
+    "frontend": "javascript",
+    "javascript": {
+        "framework": "angular",
+        "config": {
+            "SourceDir": "src",
+            "DistributionDir": "dist/angularjs-python",
+            "BuildCommand": "npm.cmd run-script build",
+            "StartCommand": "npm start"
+        }
+    },
+    "providers": [
+        "awscloudformation"
+    ]
+}
