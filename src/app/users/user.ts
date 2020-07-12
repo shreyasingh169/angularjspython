@@ -4,3 +4,13 @@ export class User {
     description: string;
     done: string;
   }
+
+//   const user = {
+//     username,
+//     password,
+//     attributes: {
+//          email,
+//          phone_number
+//          // other custom attributes
+//        }
+//  }

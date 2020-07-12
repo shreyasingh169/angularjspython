@@ -1,0 +1,52 @@
+  <div [ngSwitch]="page"> 
+    <div *ngSwitchCase="'dashboard'">
+      <ng-container *ngTemplateOutlet="dashboardControls"></ng-container>
+    </div>
+    <!-- <div *ngSwitchCase="'login'">
+      <ng-container *ngTemplateOutlet="form1"></ng-container>
+    </div> -->
+
+    <ng-container *ngSwitchDefault> 
+
+      <nav class="navbar navbar-expand navbar-dark bg-dark justify-content-between ">
+        <a class="navbar-brand " href="#" >
+          <img src="../../favicon.ico">
+        </a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink = '/userList'>Search Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink = '/users'>Add New Store</a>
+          </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+            <button  type="button"  class="btn btn-outline-primary my-2 my-sm-0" 
+            (click)="signOutAWS()">Sign Out
+            </button>
+          <!-- <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Sign Up</button> -->
+        </form>
+      </nav>
+    </ng-container>
+
+</div>
+  
+<ng-template #dashboardControls>
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand mx-auto" href="#" >
+      <img src="../../favicon.ico">
+    </a>
+    <span class="form-inline">
+      <button class="btn btn-outline-success mr-sm-2" (click)="login('login')"
+      fragment="login" type="submit">Customer Login </button>
+    
+      <button class="btn btn-outline-secondary my-2 my-sm-0" (click)="login('signup')"
+      fragment="signup" type="submit">Sign Up</button>
+    </span>
+          </nav>
+</ng-template>
+

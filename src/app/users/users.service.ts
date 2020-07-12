@@ -15,11 +15,11 @@ headers : new HttpHeaders('Access-Control-Allow-Origin: *')
 })
 export class UsersService {
   // configUrl = 'http://www.mocky.io/v2/5e919a643300001455e9cf72';
-  configUrl = 'http://localhost:5000';
+  configUrl = 'http://localhost:3000';
   constructor(private http: HttpClient) { }
 
   // methods
-  getList(): Observable<User[]> {
-    return this.http.get<User[]>(this.configUrl + '/api/tasks', httpOptions);
+  saveUser(): Observable<User[]> {
+    return this.http.get<User[]>(this.configUrl + '/users/saveUser', httpOptions);
   }
 }

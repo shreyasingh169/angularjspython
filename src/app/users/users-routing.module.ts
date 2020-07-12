@@ -8,11 +8,13 @@ import { UserAddComponent } from './user-add/user-add.component';
 
 // const routes: Routes = [];
 const routes: Routes = [
-  { path: '', redirectTo: '/user', pathMatch: 'full' },
-  { path: 'user', component: UserListComponent },
-  { path: 'detail/:id', component: UserDetailComponent },
-  { path: 'edit/:id', component: UserEditComponent },
-  { path: 'add', component: UserAddComponent }
+  { path: 'add', component: UserAddComponent },
+  { path: 'userList', component: UserListComponent },
+
+  { path: '', redirectTo: '/add', pathMatch: 'full' },
+
+  // { path: 'detail/:id', component: UserDetailComponent },
+  // { path: 'edit/:id', component: UserEditComponent },
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

@@ -1,0 +1,63 @@
+<p>image-processing works!</p>
+<div>
+    <img src="../../assets/toordal.jpeg" width="50%" />
+      <h2>Result: </h2>
+      <p>
+        {{ Result }} -- {{words}}
+      </p>
+    </div>
+
+
+    ---------------
+
+    <p-card header="Create New List" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+        <!-- subheader="Subheader" -->
+        <div>
+            <button class="btn btn-outline-info" (click)="addCheckboxes()" >+</button>
+            <form [formGroup]="form" >
+    
+                <label formArrayName="orders" *ngFor="let order of form.controls.orders.controls; let i=index">
+                  <input type="checkbox"  /> <input type="text" [formControlName]="i" placeholder="Username"/> 
+                  {{order[i]}}
+                </label>
+              
+                <button>submit</button>
+              </form>
+        </div>
+        <p-footer>
+            <button pButton type="button" label="Save" icon="pi pi-check" style="margin-right: .25em"></button>
+            <button pButton type="button" label="Cancel" icon="pi pi-times" class="ui-button-secondary"></button>
+        </p-footer>
+    </p-card>
+
+
+    <br>
+
+    <label>File Upload : 
+        <input type="file" #fileUpload id="fileUpload" name="fileUpload" 
+        multiple="multiple" accept="image/*" />
+    </label>
+        <button class="btn btn-primary" (click)="onClick()">  Upload </button>
+        
+        <h3 class="first">File to Upload</h3>
+        <!-- url="http://localhost:3000/upload/single" 
+        url="/api/upload" (onUpload)="uploadFile($event)" (uploadHandler)="myUploader($event)" customUpload="true"
+        -->
+         <!--  SINGLE FILE -->
+         <!-- <form action="http://localhost:3000/upload/single" enctype="multipart/form-data" method="POST"> 
+            <input type="file" name="myFile" />
+            <input type="submit" value="Upload a file"/>
+         </form> -->
+        
+        <p-fileUpload mode="advanced" name="uploadsingle" (onUpload)="uploadFile($event)" 
+        url="http://localhost:3000/index/uploadphoto" 
+         
+         multiple="multiple" accept="image/*" maxFileSize="1000000">
+            <ng-template pTemplate="content">
+                <ul *ngIf="uploadedFiles.length">
+                    <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                </ul>
+            </ng-template>
+        </p-fileUpload>
+        
+    

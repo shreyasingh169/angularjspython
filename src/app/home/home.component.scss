@@ -1,0 +1,11 @@
+.search { position: relative; }
+.search input { text-indent: 30px;}
+.search .fa-search { 
+  position: absolute;
+  top: 12px;
+  left: 7px;
+  font-size: 15px;
+}
+.fa .search .fa-search :focus{
+    visibility: hidden;
+}

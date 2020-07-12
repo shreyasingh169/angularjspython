@@ -1,0 +1,50 @@
+<app-header page="home" headerValues="setHeader()"></app-header>
+
+<header class="mt-5 mx-auto col-lg-4 text-center">
+    <div class="search">
+        <span class="fa fa-search"></span>
+        <input type="search" class="form-control" 
+        [(ngModel)]="searchStore"
+        [typeahead]="suggestions$"
+        [typeaheadAsync]="true"
+        [typeaheadMinLength]="2" 
+        placeholder="Search for stores nearby.." >
+    </div>
+
+
+</header>
+<main>
+    <div class="row">
+        <!-- style="width: 18rem;" -->
+    <div class="card col-sm-4"  >
+        <div class="card-body">
+            <h5 class="card-title">Store Name</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Location</h6>
+            <p class="card-text">store categories</p>
+            <a href="#" class="card-link">Select</a>
+        </div>
+    </div>
+
+    <div class="card col-sm-4"  >
+        <div class="card-body">
+            <h5 class="card-title">Store Name</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Location</h6>
+            <p class="card-text">store categories</p>
+            <a href="#" class="card-link">Select</a>
+        </div>
+    </div>
+
+    <div class="card col-sm-4"  >
+        <div class="card-body">
+            <h5 class="card-title">Store Name</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Location</h6>
+            <p class="card-text">store categories</p>
+            <a href="#" class="card-link">Select</a>
+        </div>
+    </div>
+
+</div>
+    <!-- <navigation></navigation>
+    <aside></aside>
+    <content></content> -->
+</main>

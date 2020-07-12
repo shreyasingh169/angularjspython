@@ -10,6 +10,13 @@
             "StackName": "amplify-angularjspython-prod-165048",
             "StackId": "arn:aws:cloudformation:ap-southeast-1:210534412144:stack/amplify-angularjspython-prod-165048/02c96d90-8a0b-11ea-8c7b-06abab1199f8",
             "AmplifyAppId": "d2223igbo685gx"
+        },
+        "categories": {
+            "auth": {
+                "angularjspython4af538ef": {
+                    "hostedUIProviderCreds": "[{\"ProviderName\":\"Facebook\",\"client_id\":\"220716069227109\",\"client_secret\":\"c5da67120b631e849b485ceb2436cdd0\"}]"
+                }
+            }
         }
     }
 }
